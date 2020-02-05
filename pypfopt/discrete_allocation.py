@@ -78,7 +78,7 @@ class DiscreteAllocation:
             raise ValueError("min_allocation should be a small float")
         if total_portfolio_value <= 0:
             raise ValueError("total_portfolio_value must be greater than zero")
-        if short_ratio <= 0:
+        if short_ratio < 0:
             raise ValueError("short_ratio must be positive")
 
         # Drop any companies with negligible weights. Use a tuple because order matters.
